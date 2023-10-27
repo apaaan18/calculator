@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<body>
+	
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-color: #c7c7c7;
+		}
+		.wrapper{
+			background-color: #474747;
+			padding: 10px;
+			border-radius: 10px;
+			height: 400px;
+			width: 270px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		input {
+			width: 50px;
+			height: 40px;
+			border-radius: 50px;
+			border-style: none;
+			margin: 6px;
+			background-color: #969996;
+			color: white;
+			font-size: 20px;
+		}
+		.display{
+			display: flex;
+			justify-content: flex-end;
+		}
+		.display input {
+			width: 250px;
+			padding-left: 10px;
+			font-size: 55px;
+			background-color: transparent;
+			box-shadow: none;
+			text-align: right;
+			padding-right: 10px;
+			margin-bottom: 10px;
+			color: white;
+		}
+		.display input:focus{
+			outline: none;
+		}
+		.equal {
+			width: 117px;
+		}
+		.wrapper .operator {
+			background-color: orange;
+		}
+		.wrapper .ac{
+			background-color: #dbdbdb;
+			color: black;
+		}
+		.display input::placeholder {
+			color: white;
+		}
+		@media screen and (max-width: 600px) 
+		{
+			*{
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-color: #c7c7c7;
+		}
+		.wrapper{
+			background-color: #474747;
+			padding: 10px;
+			border-radius: 15px;
+			height: 400px;
+			width: 300px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		input {
+			width: 60px;
+			height: 40px;
+			border-radius: 50px;
+			border-style: none;
+			margin: 6px;
+			background-color: #969996;
+			color: white;
+			font-size: 20px;
+		}
+		.display{
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: 10px;
+		}
+		.display input {
+			width: 280px;
+			font-size: 45px;
+			background-color: transparent;
+			box-shadow: none;
+			text-align: right;
+			color: white;
+			margin: 0;
+			padding-right: 10px;
+		}
+		.display input:focus{
+			outline: none;
+		}
+		.equal {
+			width: 136px;
+		}
+		.wrapper .operator {
+			background-color: orange;
+		}
+		.wrapper .ac{
+			background-color: #dbdbdb;
+			color: black;
+		}
+		.display input::placeholder {
+			color: white;
+		}
+		.klyde-container{
+			display: flex;
+			color: white;
+			justify-content: right;
+			margin-top: 10px;
+			font-family: arial;
+			font-size: 13px;
+		}
+		}
+	</style>
+	<div class="container">
+		<div class="wrapper">
+			<form>
+				<div class="display">
+					<input type="text" name="display" placeholder="0">
+				</div>
+				<div>
+					<input type="button" value="AC" onclick="display.value = '' " class="ac">
+					<input type="button" value="DE" onclick="display.value = display.value.toString().slice(0, -1)" class="ac">
+					<input type="button" value="." onclick="display.value += '.' " class="ac">
+					<input type="button" value="/" onclick="display.value += '/' " class="operator">
+				</div>
+				<div>
+					<input type="button" value="7" onclick="display.value += '7' "/>
+					<input type="button" value="8" onclick="display.value += '8' ">
+					<input type="button" value="9" onclick="display.value += '9' ">
+					<input type="button" value="*" onclick="display.value += '*' " class="operator js-operator">
+				</div>
+				<div>
+					<input type="button" value="4" onclick="display.value += '4' ">
+					<input type="button" value="5" onclick="display.value += '5' ">
+					<input type="button" value="6" onclick="display.value += '6' ">
+					<input type="button" value="+" onclick="display.value += '+' " class="operator">
+				</div>
+				<div>
+					<input type="button" value="1" onclick="display.value += '1' ">
+					<input type="button" value="2" onclick="display.value += '2' ">
+					<input type="button" value="3" onclick="display.value += '3' ">
+					<input type="button" value="-" onclick="display.value += '-' " class="operator">
+				</div>
+				<div>
+					<input type="button" value="00" onclick="display.value += '00' ">
+					<input type="button" value="0" onclick="display.value += '0' ">
+					<input type="button" value="=" onclick="display.value = eval(display.value)" class="equal operator">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<script>
+		
+	</script>
+	</body>
+</html>
